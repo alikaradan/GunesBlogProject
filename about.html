@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Gunes's Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
+    <style>
+        
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            display: block;
+        }
+
+        .close {
+            color: white;
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .gallery-img {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .gallery-img:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Main Page</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="blog-posts.html"><i class="fa-brands fa-blogger"></i> Blog Posts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="about-content">
+                <img src="images/346D853E-C0F3-42CA-8D7D-528685A78A09.JPG" alt="Kedim" class="about-img">
+                <div class="about-text">
+                    <h2>About Gunes</h2>
+                    <p>Hi, I'm Gunes! I'm a curious little(might not be so little) cat who loves to explore the world. I enjoy napping in the sun, fighting with my owner, and occasionally making a mess. Follow my blog for my latest adventures, fun facts, and all things feline!</p>
+                    <p>Age: 6 Years Old</p>
+                    <p>Favorite Activity: Sleeping on anywhere</p>
+                    <p>Fun Fact: I love to eat melon</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="about-gallery">
+            <h3>Gunes's Gallery</h3>
+            <div class="gallery">
+                <img src="images/2C27E2A1-A44A-457C-8127-FFAC912AB712.JPG" alt="Gunes playing" class="gallery-img" onclick="openModal(this.src)">
+                <img src="images/IMG_1589.JPG" alt="Gunes napping" class="gallery-img" onclick="openModal(this.src)">
+                <img src="images/7356AC56-6589-446D-A54C-71F0BAB42DB8.JPG" alt="Gunes exploring" class="gallery-img" onclick="openModal(this.src)">
+                <img src="images/IMG_1605.JPG" alt="Gunes with toys" class="gallery-img" onclick="openModal(this.src)">
+            </div>
+        </section>
+    </footer>
+
+    
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+       
+        function openModal(imageSrc) {
+            var modal = document.getElementById('myModal');
+            var modalImg = document.getElementById('modalImage');
+            modal.style.display = "block";
+            modalImg.src = imageSrc;
+        }
+
+       
+        function closeModal() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
+<section class="subscribe-section">
+    <h2>Want to see more of my cute moments?</h2>
+    <p>Click below to subscribe and never miss an update!</p>
+    <a href="subscription.html" class="subscribe-btn">Subscribe</a>
+</section>

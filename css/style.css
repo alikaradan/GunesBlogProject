@@ -1,0 +1,775 @@
+/* Temel Stil */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Oswald", sans-serif;
+    line-height: 1.6;
+    background-color: #9a948d; /* Arka plan rengini güncelledim */
+    background-image: none; /* Arka plan görselini kaldırdım */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Header Stili */
+header {
+    background: #35342e; /* Header arka plan rengini güncelledim */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Search Form */
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-input {
+    width: 200px;
+    padding: 7px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-button {
+    padding: 10px;
+    background-color: rgb(131, 131, 131);
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+/* Home Page Intro */
+.home-intro {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Featured Posts Alanı */
+.featured-posts {
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    max-width: 1200px;
+}
+
+.featured-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.posts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.post {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    background-color: #fff;
+}
+
+.post img {
+    width: 100%; /* Resmin kapsayıcıya sığması için */
+    max-height: 500px; /* Maksimum yükseklik */
+    object-fit: cover; /* Resmin düzgün bir şekilde kırpılması */
+}
+
+.post h3 {
+    font-size: 20px;
+    margin: 10px;
+    color: #007BFF;
+}
+
+.post p {
+    font-size: 14px;
+    margin: 10px;
+    color: #555;
+}
+
+.read-more {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+}
+
+.about {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.about h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-gallery {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.about-gallery h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover; /* Resimleri çerçeveye sığdırmak için */
+    border: 4px solid #f4f4f4; /* Çerçeve rengi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+    transition: transform 0.3s ease; /* Efektin geçiş süresi */
+}
+
+.gallery-img:hover {
+    transform: scale(1.1); /* Resim üzerine gelindiğinde büyüme efekti */
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 300px;
+}
+
+.search-button {
+    padding: 10px;
+    background-color: #ff8c00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-button i {
+    color: white;
+    font-size: 18px;
+}
+
+.search-button:hover {
+    background-color: #e07b00;
+}
+
+.posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.post {
+    width: 45%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.post img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.post h3 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.post p {
+    font-size: 14px;
+    color: #666;
+}
+
+.post a.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #ff8c00;
+}
+
+.post a.read-more:hover {
+    color: #e07b00;
+}
+
+.post:hover {
+    transform: scale(1.05);
+}
+
+.post[style="display: none;"] {
+    display: none;
+}
+
+/* Galeri Tasarımı */
+/* Galeri Tasarımı */
+.about-gallery {
+    padding: 40px 20px;
+}
+
+.about-gallery h3 {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Resimlerin boyutlarını küçültüyoruz */
+    gap: 20px;
+    justify-items: center;
+    padding: 0 20px;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Resmin kutuya düzgün oturmasını sağlıyoruz */
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    max-width: 250px; /* Resimlerin maksimum genişliğini sınırlıyoruz */
+    max-height: 250px; /* Yükseklik de sabit olmalı */
+}
+
+.gallery-img:hover {
+    transform: scale(1.05); /* Hover efekti ile biraz büyütme */
+}
+
+/* Modal stilini burada tanımlıyoruz */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    display: block;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Genel düzenlemeler */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #ff9800;
+}
+
+/* Galeri düzeni */
+.gallery-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.gallery-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Dinamik kolon sayısı */
+    gap: 20px;
+    justify-items: center;
+}
+
+.gallery-item {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05); /* Görsellerin üzerine gelindiğinde büyümesini sağlar */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+/* Responsive Tasarım */
+@media screen and (max-width: 768px) {
+    .gallery-section h2 {
+        font-size: 28px;
+    }
+
+    .gallery-section p {
+        font-size: 16px;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-section h2 {
+        font-size: 24px;
+    }
+
+    .gallery-section p {
+        font-size: 14px;
+    }
+}
+/* Blog Yazısı Sayfası Stili */
+.post-detail {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-detail img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.post-detail h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.post-detail p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.post-detail .author-info {
+    font-style: italic;
+    color: #888;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.post-detail .author-info span {
+    color: #333;
+}
+
+/* Yorumlar Bölümü */
+.comments-section {
+    margin-top: 40px
+}
+/* Yorumlar Bölümü */
+.comments-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+/* Yorum Başlığı */
+.comments-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Tek bir Yorum */
+.comment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.comment img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.comment-content {
+    max-width: 700px;
+}
+
+.comment-content p {
+    font-size: 16px;
+    color: #555;
+}
+
+.comment-content .comment-author {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* Yorumlar Bölümü */
+.comments-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+/* Yorum Başlığı */
+.comments-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Yorumlar Listesi */
+.comments-list {
+    margin-bottom: 20px;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.comment img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.comment-content {
+    max-width: 700px;
+}
+
+.comment-content p {
+    font-size: 16px;
+    color: #555;
+}
+
+.comment-content .comment-author {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* Yorum Gönderme Formu */
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.comment-form input,
+.comment-form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.comment-form button {
+    padding: 12px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Instagram Linki */
+.instagram-link {
+    display: flex;
+    align-items: center;
+    font-size: 20px;  /* İkon ve yazının büyüklüğünü ayarlıyoruz */
+    color: #E4405F;  /* Instagram kırmızımsı rengi */
+    text-decoration: none;
+    margin-top: 20px;  /* Üstten biraz boşluk */
+    padding: 12px 20px;  /* İç boşluk */
+    background-color: #fff;
+    border-radius: 30px;  /* Yumuşak köşeler */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);  /* Gölgeleme */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;  /* Maksimum genişlik */
+    margin-left: auto;  /* Ortalamak için */
+    margin-right: auto;  /* Ortalamak için */
+    justify-content: center;
+}
+
+/* İkonun stilini ayarlıyoruz */
+.instagram-link i {
+    font-size: 28px;  /* İkon boyutunu büyütüyoruz */
+    margin-right: 15px;  /* İkon ile yazı arasına boşluk ekliyoruz */
+}
+
+/* Hover efekti */
+.instagram-link:hover {
+    background-color: #E4405F;  /* Arka plan rengini değiştir */
+    color: white;  /* Metin rengini beyaz yap */
+    transform: scale(1.1);  /* İkonu biraz büyüt */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);  /* Hover durumunda gölgelendirme */
+}
+
+/* Yalnızca mobilde ikonun boyutunu küçült */
+@media (max-width: 768px) {
+    .instagram-link {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .instagram-link i {
+        font-size: 24px;
+    }
+}
+/* Header ve Navbar Genel Stil */
+header {
+    background-color: #333; /* Koyu gri bir arka plan rengi */
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px; /* Sağdaki boşluğu artırarak elemanlar arasında boşluk bırak */
+}
+
+header nav ul li a {
+    color: #fff; /* Yazı rengi beyaz */
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    font-size: 16px; /* Yazı boyutunu ayarlayın */
+    font-weight: bold; /* Kalın yazı */
+}
+
+header nav ul li a:hover {
+    color: #ff9800; /* Hover durumunda yazı rengini değiştir */
+}
+
+/* Abone Ol Butonu Stil */
+/* Subscribe Section */
+.subscribe-section {
+    text-align: center;
+    margin: 50px 0;
+    padding: 20px;
+}
+
+.subscribe-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.subscribe-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Subscribe Button */
+.subscribe-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #FF8C00; /* Or your preferred color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #FF5A00;
+}
+
